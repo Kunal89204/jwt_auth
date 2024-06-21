@@ -121,11 +121,20 @@ const loginUser = async (req, res) => {
       res.status(403).json({ message: 'Invalid refresh token' });
     }
   };
+
+  const validate_token = async (req, res) => {
+    try {
+      res.status(200).json({ valid: true })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   
   
   module.exports = {
       registerUser,
       loginUser,
       testRoute,
-      refreshAccessToken
+      refreshAccessToken,
+      validate_token
   }

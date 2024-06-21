@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {AuthContext} from '../context/AuthContextProvider'
 
 const Home = () => {
+  const {user} = useContext(AuthContext)
+  console.log(user.accessToken)
   return (
+    <>
     <div>
-      i am home page
+      {user.accessToken?<p>hello</p>:<p>bye</p>}
     </div>
+    </>
   )
 }
 
