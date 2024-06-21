@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useReducer } from 'react'
 
-const AuthContext = createContext()
+export const AuthContext = createContext()
 
 const User = { user: null }
 
