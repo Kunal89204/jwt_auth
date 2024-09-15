@@ -71,7 +71,7 @@ const loginUser = async (req, res) => {
           existingUser._id
         );
   
-          // Set refresh token as a cookie
+          // Set refresh token as a z
       res.cookie("refreshToken", refreshToken, {
           httpOnly: true,
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
